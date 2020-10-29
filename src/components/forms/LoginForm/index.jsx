@@ -1,14 +1,9 @@
 import React from 'react';
-import { Form, Field, Formik, ErrorMessage, validateYupSchema } from 'formik';
-import { Link } from 'react-router-dom';
-import * as Yup from 'yup';
-
-import { LoginFormValidationScheme as validationScheme } from './LoginFormValidationScheme';
-
-import reset from '../SignInForm/reset.css'; // CHANGE IT LATER
-import styles from './LoginForm.module.css';
+import { Form, Field, Formik, ErrorMessage } from 'formik';
+import { LoginFormValidationScheme as validationScheme } from '../../../validationSchemes';
 import Icon from '@mdi/react';
 import { mdiFacebook, mdiGoogle } from '@mdi/js';
+import styles from './LoginForm.module.css';
 
 const submitHabdler = (values, form) => {
   form.resetForm();
@@ -97,142 +92,6 @@ const LoginForm = (props) => {
               <Icon path={mdiGoogle} size={1} value="Here som link" />
               <a className={styles.signInWith}>Sign up with Facebook</a>
             </a>
-
-            {/* <div>
-                <div className={styles.row}>
-                  <Field
-                    className={styles.inputField}
-                    name="firstName"
-                    type="text"
-                    placeholder="First name"
-                  />
-  
-                  <Field
-                    className={styles.inputField}
-                    name="lastName"
-                    type="text"
-                    placeholder="Last name"
-                  />
-                </div>
-  
-                <div className={styles.errorMessageContainer}>
-                  <ErrorMessage
-                    className={styles.errorMessage}
-                    name="firstName"
-                    component="span"
-                  />
-  
-                  <ErrorMessage
-                    className={styles.errorMessage}
-                    name="lastName"
-                    component="span"
-                  />
-                </div>
-  
-                <div className={styles.row}>
-                  <Field
-                    className={styles.inputField}
-                    name="displayName"
-                    type="text"
-                    placeholder="Display Name"
-                  />
-                  <Field
-                    className={styles.inputField}
-                    name="password"
-                    type="password"
-                    placeholder="Password"
-                  />
-                </div>
-  
-                <div className={styles.errorMessageContainer}>
-                  <ErrorMessage
-                    className={styles.errorMessage}
-                    name="displayName"
-                    component="span"
-                  />
-  
-                  <ErrorMessage
-                    className={styles.errorMessage}
-                    name="password"
-                    component="span"
-                  />
-                </div>
-  
-                <div className={styles.row}>
-                  <Field
-                    className={styles.inputField}
-                    name="email"
-                    type="text"
-                    placeholder="Email Address"
-                  />
-                  <Field
-                    className={styles.inputField}
-                    name="passwordConf"
-                    type="password"
-                    placeholder="Password Confirmation"
-                  />
-                </div>
-  
-                <div className={styles.errorMessageContainer}>
-                  <ErrorMessage
-                    className={styles.errorMessage}
-                    name="email"
-                    component="span"
-                  />
-  
-                  <ErrorMessage
-                    className={styles.errorMessage}
-                    name="passwordConf"
-                    component="span"
-                  />
-                </div>
-              </div>
-              <label className={styles.radioField} for="joinAsBayer">
-                <input name="joinAs" type="radio" /> <span>Join As a Buyer</span>
-                <p className={styles.radioInfo}>
-                  I am looking for a Name, Logo or Tagline for my business, brand
-                  or product.
-                </p>
-              </label>
-  
-              <label className={styles.radioField} for="joinAsSeller">
-                <input name="joinAs" type="radio" /> Join As a Creative or
-                Marketplace Seller
-                <p className={styles.radioInfo}>
-                  I plan to submit name ideas, Logo designs or sell names in
-                  Domain Marketplace.
-                </p>
-              </label>
-  
-              <label className={styles.checkboxField}>
-                <Field name="allowSquadhelp" type="checkbox" /> Allow Squadhelp to
-                send marketing/promotional offers from time to time
-              </label>
-  
-              <Field
-                className={styles.createAccountBtn}
-                type="submit"
-                value="Create account"
-              />
-  
-              <span className={styles.termsOfService}>
-                <p>
-                  By clicking this button, you agree to our{' '}
-                  <a className={styles.termsOfServiceLink} href="#">
-                    Terms of Service
-                  </a>{' '}
-                </p>
-              </span>
-  
-              <a href="#" className={styles.signUpFacebookBtn}>
-                <Icon path={mdiFacebook} size={1} value="Here som link" />
-                <a className={styles.signInWith}>Sign up with Facebook</a>
-              </a>
-  
-              <a href="#" className={styles.signUpGoogleBtn}>
-                <Icon path={mdiGoogle} size={1} value="Here som link" />
-                <a className={styles.signInWith}>Sign up with Facebook</a>
-              </a> */}
           </Form>
         )}
       </Formik>

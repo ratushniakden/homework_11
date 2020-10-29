@@ -1,7 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
+import reset from './css/reset.css';
 import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 const SignInForm = React.lazy(() => import('./components/forms/SignInForm'));
 const LoginForm = React.lazy(() => import('./components/forms/LoginForm'));

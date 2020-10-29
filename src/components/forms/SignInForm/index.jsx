@@ -1,9 +1,6 @@
 import React from 'react';
-import { Form, Field, Formik, ErrorMessage, validateYupSchema } from 'formik';
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
-import * as Yup from 'yup';
-import { SignInFormValidationScheme as validationScheme } from './SignInFormValidationScheme';
-import reset from './reset.css';
+import { Form, Field, Formik, ErrorMessage } from 'formik';
+import { SignInFormValidationScheme as validationScheme } from '../../../validationSchemes';
 import styles from './SignInForm.module.css';
 import Icon from '@mdi/react';
 import { mdiFacebook, mdiGoogle } from '@mdi/js';
@@ -19,7 +16,7 @@ const SignInForm = (props) => {
     displayName: '',
     email: '',
     password: '',
-    passwordConf: '',
+    passwordConfirmation: '',
   };
 
   return (
