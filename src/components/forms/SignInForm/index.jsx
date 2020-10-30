@@ -4,10 +4,7 @@ import { SignInFormValidationScheme as validationScheme } from '../../../validat
 import styles from './SignInForm.module.css';
 import Icon from '@mdi/react';
 import { mdiFacebook, mdiGoogle } from '@mdi/js';
-
-const submitHabdler = (values, form) => {
-  form.resetForm();
-};
+import classNames from 'classnames';
 
 const SignInForm = (props) => {
   const initialValues = {
@@ -17,6 +14,10 @@ const SignInForm = (props) => {
     email: '',
     password: '',
     passwordConfirmation: '',
+  };
+
+  const submitHabdler = (values, form) => {
+    form.resetForm();
   };
 
   return (
@@ -173,14 +174,27 @@ const SignInForm = (props) => {
               </p>
             </span>
 
-            <a href="#" className={styles.signUpFacebookBtn}>
+            <a
+              href="#"
+              className={classNames(
+                styles.createAccountBtn,
+                styles.signUpFacebookBtn
+              )}
+            >
               <Icon path={mdiFacebook} size={1} value="Here som link" />
               <a className={styles.signInWith}>Sign up with Facebook</a>
             </a>
 
-            <a href="#" className={styles.signUpGoogleBtn}>
+            <a
+              href="#"
+              className={classNames(
+                styles.createAccountBtn,
+                styles.signUpFacebookBtn,
+                styles.signUpGoogleBtn
+              )}
+            >
               <Icon path={mdiGoogle} size={1} value="Here som link" />
-              <a className={styles.signInWith}>Sign up with Facebook</a>
+              <a className={styles.signInWith}>Sign up with Google</a>
             </a>
           </Form>
         )}

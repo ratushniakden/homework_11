@@ -4,15 +4,16 @@ import { LoginFormValidationScheme as validationScheme } from '../../../validati
 import Icon from '@mdi/react';
 import { mdiFacebook, mdiGoogle } from '@mdi/js';
 import styles from './LoginForm.module.css';
-
-const submitHabdler = (values, form) => {
-  form.resetForm();
-};
+import classNames from 'classnames';
 
 const LoginForm = (props) => {
   const initialValues = {
     email: '',
     password: '',
+  };
+
+  const submitHabdler = (values, form) => {
+    form.resetForm();
   };
 
   return (
@@ -83,14 +84,27 @@ const LoginForm = (props) => {
               value="Login"
             />
 
-            <a href="#" className={styles.signUpFacebookBtn}>
+            <a
+              href="#"
+              className={classNames(
+                styles.createAccountBtn,
+                styles.signUpFacebookBtn
+              )}
+            >
               <Icon path={mdiFacebook} size={1} value="Here som link" />
               <a className={styles.signInWith}>Sign up with Facebook</a>
             </a>
 
-            <a href="#" className={styles.signUpGoogleBtn}>
+            <a
+              href="#"
+              className={classNames(
+                styles.createAccountBtn,
+                styles.signUpFacebookBtn,
+                styles.signUpGoogleBtn
+              )}
+            >
               <Icon path={mdiGoogle} size={1} value="Here som link" />
-              <a className={styles.signInWith}>Sign up with Facebook</a>
+              <a className={styles.signInWith}>Sign up with Google</a>
             </a>
           </Form>
         )}

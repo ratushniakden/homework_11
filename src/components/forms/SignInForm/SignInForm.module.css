@@ -108,13 +108,14 @@ body {
 .createAccountBtn {
   cursor: pointer;
   padding: 20px;
-  margin: 20px 5px;
+  margin: 15px 5px;
   border-radius: 5px;
   background-color: rgb(40, 210, 208);
   color: white;
   font-size: 1.1rem;
   border: none;
   outline: none;
+  text-decoration: none;
 }
 
 .termsOfService {
@@ -129,29 +130,14 @@ body {
 }
 
 .signUpFacebookBtn {
-  /*COPY PASTA*/
-  cursor: pointer;
   padding: 10px 15px;
   margin: 5px;
-  border-radius: 5px;
   background-color: rgb(45, 67, 115);
-  color: white;
-  border: none;
-  outline: none;
-  text-decoration: none;
+  font-size: 1rem;
 }
 
 .signUpGoogleBtn {
-  /*COPY PASTA*/
-  cursor: pointer;
-  padding: 10px 15px;
-  margin: 5px;
-  border-radius: 5px;
   background-color: rgb(221, 75, 57);
-  color: white;
-  border: none;
-  outline: none;
-  text-decoration: none;
 }
 
 .signInWith {
